@@ -1,0 +1,99 @@
+/* index.css */
+/* Global resets, CSS variables, and base styles.
+   These apply to the entire app. */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  --brand-primary:  #7C3AED;      /* energetic orange */
+  --brand-secondary:#1A1A2E;      /* deep navy */
+  --brand-accent:   #C084FC;      /* golden yellow */
+  --brand-light:    #F3EEFF;      /* warm off-white */
+
+  --text-dark:      #0F0F1A;
+  --text-mid:       #4A4A6A;
+  --text-light:     #9898B8;
+
+  --white:          #FFFFFF;
+  --surface:        #EDE9FF;
+  --border:         #EDE8E3;
+
+  --radius-sm:      8px;
+  --radius-md:      16px;
+  --radius-lg:      24px;
+  --radius-xl:      36px;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-lg: 0 20px 48px rgba(0,0,0,0.13);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--brand-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition);
+}
+
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ── Shared Button Styles ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--brand-primary);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(255,107,44,0.35);
+}
+.btn--primary:hover {
+  background: #e55a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,107,44,0.4);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1.5px solid var(--border);
+}
+.btn--ghost:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.btn--full { width: 100%; justify-content: center; padding: 14px; font-size: 1rem; }
