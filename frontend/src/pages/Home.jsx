@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import SearchBar from '../components/SearchBar'
+import SearchBar from '../components/Searchbar'
 import ServiceCard from '../components/ServiceCard'
 import Footer from '../components/Footer'
 import {
@@ -11,7 +11,7 @@ import {
   getServicesApi,
   createBookingApi,
 } from '../services/api'
-import '../css/home.css'
+import '../css/Home.css'
 
 // Default fallback data (displayed if backend is connecting)
 const defaultServiceCategories = [
